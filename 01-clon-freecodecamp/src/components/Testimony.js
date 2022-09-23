@@ -3,12 +3,12 @@ import '../stylesheets/Testimony.css';
 const Testimony = ({ results }) => {
   let display;
   display = results.map((x) => {
-    let {id, name, country, position, image, enterprise, testimony} = x;
+    let {name, country, position, image, enterprise, testimony} = x;
   
     return (
-      <div key={id} className='container-testimony'>
+      <div className='container-testimony'>
         <div className='container-testimony-img'>
-          <img 
+          <img
             className='img-testimony'
             src={require(`../images/testimony-${image}.png`)}
             alt= {`${name}`}
